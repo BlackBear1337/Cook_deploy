@@ -25,9 +25,7 @@ SECRET_KEY = 'django-insecure-(*nybv3q0xoap1$e(6#l+g6=jq0=wl!692o6c378=(@ja=n38)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    '*'
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,13 +79,14 @@ WSGI_APPLICATION = 'cook_blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+DATABASES= {
+    'default' : {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cookdb',
-        'USER': 'admin',
-        'PASSWORD': 'python2022',
-        'HOST': 'localhost'
+        'NAME': 'djangodb',
+        'USER': 'dbuser',
+        'PASSWORD': 'django',
+        'HOST': 'localhost',
+        'PORT': ''
     }
 }
 
@@ -140,4 +139,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
-STATIC_ROOT = '/var/www/html' + STATIC_URL
+STATIC_ROOT = '/var/www/html/static'
