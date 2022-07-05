@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(*nybv3q0xoap1$e(6#l+g6=jq0=wl!692o6c378=(@ja=n38)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'mptt',
     'ckeditor',
     'contact',
+    'gunicorn'
     # 'gallery',
 ]
 
@@ -139,4 +140,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
-STATIC_ROOT = '/var/www/html/static'
+STATIC_ROOT = '/var/www/html' + STATIC_URL
